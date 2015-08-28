@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
 * {
   font: inherit;
   box-sizing: border-box;
@@ -7,19 +9,20 @@
 }
 
 body {
+  padding: 25px;
   margin: 0;
   background-color: white;
 }
 
 html {
   font-size: 1em;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
-  font-style: italic;
 }
 
 header {
-
+  width: 100%;
+  height: 50px;
 }
 
 ul {
@@ -29,4 +32,204 @@ ul {
 
 li {
   list-style: none;
+}
+
+/*<><><><> About Container <><><><>*/
+div.main-cont {
+  width: 100%;
+}
+
+div.about-cont {
+  width: 100%;
+}
+
+div.about-cont div.content h2 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+div.about-cont div.content p {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.content {
+  text-align: center;
+}
+
+/*<><><><> Burger Button <><><><>*/
+#hamburger-button {
+  height: 21px;
+  width: 25px;
+  margin: 18px 43px 0 0;
+  right: 0;
+  z-index: 9999;
+  position: fixed;
+  -oz-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+#hamburger-button:hover {
+  cursor: pointer;
+}
+
+#hamburger-button:hover :first-child {
+  -oz-transform: translateY(7px) rotate(90deg);
+  -moz-transform: translateY(7px) rotate(90deg);
+  -webkit-transform: translateY(7px) rotate(90deg);
+  transform: translateY(7px) rotate(90deg);
+}
+
+#hamburger-button:hover :last-child {
+  -oz-transform: translateY(-7x) rotate(-90deg);
+  -moz-transform: translateY(-7px) rotate(-90deg);
+  -webkit-transform: translateY(-7px) rotate(-90deg);
+  transform: translateY(-7px) rotate(-90deg);
+}
+
+#hamburger-button > span {
+  margin-top: 4px;
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  -oz-transition: all .125s ease-in-out;
+  -moz-transition: all .125s ease-in-out;
+  -webkit-transition: all .125s ease-in-out;
+  transition: all .125s ease-in-out;
+}
+
+#hamburger-button span:first-child {
+  margin-top: 0;
+}
+
+#hamburger-button.open :first-child {
+  -oz-transform: translateX(13px) translateY(3px) rotateY(45deg);
+  -moz-transform: translateX(13px) translateY(3px) rotateY(45deg);
+  -webkit-transform: translateX(13px) translateY(3px) rotateY(45deg);
+  transform: translateX(13px) translateY(3px) rotate(45deg);
+  width: 15px;
+}
+
+#hamburger-button.open :nth-child(2) {
+  -oz-transform: translateX(1px);
+  -moz-transform: translateX(1px);
+  -webkit-transform: translateX(1px);
+  transform: translateX(1px);
+  width: 24px;
+}
+
+#hamburger-button.open :last-child {
+  -oz-transform: translateX(13px) translateY(-3px) rotate(-45deg);
+  -moz-transform: translateX(13px) translateY(-3px) rotate(-45deg);
+  -webkit-transform: translateX(13px) translateY(-3px) rotate(-45deg);
+  transform: translateX(13px) translateY(-3px) rotate(-45deg);
+  width: 15px;
+}
+
+#hamburger-button.open {
+  -oz-transform: rotate(-360deg);
+  -moz-transform: rotate(-360deg);
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+
+#hamburger-button.open > span {
+  background-color: white;
+}
+
+/*<><><><><> MENU <><><><><>*/
+#menu-wrapper {
+  background-color: black;
+  z-index: -1;
+  width: 100%;
+  height: inherit;
+  position: relative;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5 ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#menu-wrapper.open {
+  opacity: 1;
+}
+
+ul#menu {
+  text-align: center;
+  height: 100%;
+}
+
+ul#menu li {
+  font-style: normal;
+  font-size: 1.25em;
+  font-weight: 200;
+  letter-spacing: 2px;
+  width: 200px;
+  left: 20%;
+  position: relative;
+  opacity: 0;
+  display: inline-block;
+  padding: 0 0 8px 0;
+  margin: 10px auto 0;
+  color: white;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25 ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+ul#menu li {
+  text-decoration: none;
+  -oz-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+#menu-wrapper.open ul#menu li {
+  left: 0;
+  opacity: 1;
+}
+
+/* TRANSITION-END */
+ul#menu :first-child {
+  transition: opacity 1s ease .35s, left .75s ease .35s;
+}
+
+ul#menu :nth-child(2) {
+  position: relative;
+  transition: opacity 1s ease .30s, left .75s ease .30s;
+}
+
+ul#menu :nth-child(3){
+  transition: opacity 1s ease .25s, left .75s ease .25s;
+}
+
+ul#menu :nth-child(4) {
+  transition: opacity 1s ease .20s, left .75s ease .20s;
+}
+
+ul#menu :nth-child(5) {
+  transition: opacity 1s ease .15s, left .75s ease .15s;
+}
+
+ul#menu li a,
+ul#menu li span {
+  text-decoration: none;
+  color: #495867;
+  transition-delay: 0s;
+}
+
+ul#menu :first-child.trans-end,
+ul#menu :nth-child(2).trans-end,
+ul#menu :nth-child(3).trans-end,
+ul#menu :nth-child(4).trans-end,
+ul#menu :nth-child(5).trans-end {
+  transition-delay: 0s !important;
 }
