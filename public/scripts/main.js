@@ -1,6 +1,3 @@
-$(document).ready(function() {
-});
-
 var $hamburger = $("#hamburger-button"),
     $root      = $('html, body'),
     $logo      = $("#logo-button");
@@ -50,15 +47,6 @@ $('#contact').click(function() {
     animateHamburger();
     return false;
 });
-
-// $('.scroll-animate').click(function() {
-//   if ($("#menu-wrapper").hasClass("open")) {
-//     slideMenu();
-//     animateHamburger();
-//   } else if ($("#menu-wrapper").hasClass("")) {
-//     return;
-//   };
-// });
 
 $('#scroll-top i').click(function() {
     $root.animate({
