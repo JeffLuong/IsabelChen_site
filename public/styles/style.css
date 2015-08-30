@@ -269,9 +269,9 @@ a#logo-button:visited {
 }
 
 #hamburger-button.open :first-child {
-  -oz-transform: translateX(13px) translateY(1px) rotateY(45deg);
-  -moz-transform: translateX(13px) translateY(1px) rotateY(45deg);
-  -webkit-transform: translateX(13px) translateY(1px) rotateY(45deg);
+  -oz-transform: translateX(13px) translateY(1px) rotate(45deg);
+  -moz-transform: translateX(13px) translateY(1px) rotate(45deg);
+  -webkit-transform: translateX(13px) translateY(1px) rotate(45deg);
   transform: translateX(13px) translateY(1px) rotate(45deg);
   width: 15px;
 }
@@ -392,6 +392,9 @@ div#scroll-top {
 
 div#scroll-top i {
   font-size: 3em;
+  -oz-transition: all .125s ease-in-out;
+  -moz-transition: all .125s ease-in-out;
+  -webkit-transition: all .125s ease-in-out;
   transition: all .125s ease-in-out;
 }
 
