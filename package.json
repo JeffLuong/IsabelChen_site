@@ -1,0 +1,27 @@
+{
+  "name": "IsabelChen_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "morgan": "^1.6.1",
+    "express-ejs-layouts": "^1.1.0",
+    "ejs": "^2.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JeffLuong/IsabelChen_site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeffLuong/IsabelChen_site/issues"
+  },
+  "homepage": "https://github.com/JeffLuong/IsabelChen_site"
+}

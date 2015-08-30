@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
-
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400italic|Lato:400,300,700);
 * {
   font: inherit;
   box-sizing: border-box;
@@ -9,9 +8,7 @@
 }
 
 body {
-  padding: 25px;
-  margin: 0;
-  background-color: white;
+  margin: 24px;
 }
 
 html {
@@ -22,7 +19,11 @@ html {
 
 header {
   width: 100%;
-  height: 50px;
+  /*height: 40px;*/
+}
+
+a {
+  text-decoration: none;
 }
 
 ul {
@@ -34,41 +35,204 @@ li {
   list-style: none;
 }
 
+div.border {
+  position: fixed;
+  z-index: 10;
+  background-color: #F3F3F3;
+}
+
+div.top, div.bottom {
+  width: 100%;
+  height: 24px;
+  left: 0;
+}
+
+div.left, div.right {
+  width: 24px;
+  height: 100vh;
+  top: 0;
+}
+
+div.top {
+  top: 0;
+}
+
+div.bottom {
+  bottom: 0;
+}
+
+div.right {
+  right: 0;
+}
+
+div.left {
+  left: 0;
+}
+
+/*<><><><> App Container <><><><>*/
+div.app-cont {
+  background-color: white;
+  padding: 45px 45px 0;
+  overflow: hidden;
+}
+
 /*<><><><> About Container <><><><>*/
-div.main-cont {
+div.main-cont,
+div.header-cont {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+}
+
+div.header-cont {
+  color: white;
+  margin-top: 260px;
+  background: none;
+}
+
+div.name-cont,
+div.about-cont,
+div.contact-cont {
   width: 100%;
 }
 
-div.about-cont {
-  width: 100%;
+div.content {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 75px 0;
+  border-bottom: 1px solid lightgray;
 }
 
-div.about-cont div.content h2 {
+div.content h2 {
   font-size: 3em;
-  font-weight: 700;
 }
 
-div.about-cont div.content p {
+div.content h3 {
   font-size: 2em;
-  font-weight: 300;
+}
+
+div.content p {
+  font-size: 1.25em;
+}
+
+div.header-cont div.content h2,
+div.header-cont div.content h3 {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+div.header-cont div.content h3 {
+  font-weight: 100;
+  letter-spacing: 3px;
+  font-size: 1em;
+  margin-top: 0;
+}
+
+div.header-cont div.content {
+  border: none;
+  padding: 0;
 }
 
 .content {
   text-align: center;
 }
 
-/*<><><><> Burger Button <><><><>*/
-#hamburger-button {
-  height: 21px;
-  width: 25px;
-  margin: 18px 43px 0 0;
+/*<><><><> Footer <><><><>*/
+footer.contact-cont {
+  width: 100%;
+  height: 250px;
+  padding-top: 25px;
+  background-color: black;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+}
+
+footer.contact-cont ul li a,
+footer.contact-cont span,
+footer.contact-cont h4 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+footer.contact-cont h4 {
+  border-bottom: 1px solid darkgray;
+  width: 50%;
+  padding-bottom: 15px;
+  margin: 0 auto;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  font-weight: lighter;
+}
+
+footer.contact-cont ul li a {
+  text-transform: none;
+}
+
+footer.contact-cont ul li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+footer.contact-cont ul li:last-child {
+  margin-right: 0;
+}
+
+footer.contact-cont ul {
+  margin: 55px 0;
+}
+
+footer.contact-cont h4 {
+  text-transform: lowercase;
+  margin-top: 0;
+}
+
+footer.contact-cont span {
+  bottom: 10px;
+  font-size: .5em;
+}
+
+/*<><><><> Burger Button & Logo <><><><>*/
+#hamburger-button,
+a#logo-button {
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  margin: 24px 24px 0 0;
+  top: 0;
   right: 0;
   z-index: 9999;
   position: fixed;
-  -oz-transition: all .4s ease-in-out;
-  -moz-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  background-color: white;
+  -oz-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+a#logo-button {
+  left: 0;
+  margin-left: 24px;
+  text-align: center;
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -oz-flex;
+}
+
+a#logo-button:hover {
+  cursor: pointer;
+}
+
+a#logo-button h2 {
+  margin: auto;
+  font-size: 1.25em;
+}
+
+a#logo-button:visited {
+  color: black;
 }
 
 #hamburger-button:hover {
@@ -76,40 +240,40 @@ div.about-cont div.content p {
 }
 
 #hamburger-button:hover :first-child {
-  -oz-transform: translateY(7px) rotate(90deg);
-  -moz-transform: translateY(7px) rotate(90deg);
-  -webkit-transform: translateY(7px) rotate(90deg);
-  transform: translateY(7px) rotate(90deg);
+  -oz-transform: translateY(6px) rotate(90deg);
+  -moz-transform: translateY(6px) rotate(90deg);
+  -webkit-transform: translateY(6px) rotate(90deg);
+  transform: translateY(6px) rotate(90deg);
 }
 
 #hamburger-button:hover :last-child {
-  -oz-transform: translateY(-7x) rotate(-90deg);
-  -moz-transform: translateY(-7px) rotate(-90deg);
-  -webkit-transform: translateY(-7px) rotate(-90deg);
-  transform: translateY(-7px) rotate(-90deg);
+  -oz-transform: translateY(-6x) rotate(-90deg);
+  -moz-transform: translateY(-6px) rotate(-90deg);
+  -webkit-transform: translateY(-6px) rotate(-90deg);
+  transform: translateY(-6px) rotate(-90deg);
 }
 
 #hamburger-button > span {
-  margin-top: 4px;
+  margin: 4px 8px 0 8px;
   display: block;
-  width: 25px;
-  height: 3px;
+  width: 23px;
+  height: 2px;
   background-color: black;
-  -oz-transition: all .125s ease-in-out;
-  -moz-transition: all .125s ease-in-out;
-  -webkit-transition: all .125s ease-in-out;
-  transition: all .125s ease-in-out;
+  -oz-transition: all .175s ease-in-out;
+  -moz-transition: all .175s ease-in-out;
+  -webkit-transition: all .175s ease-in-out;
+  transition: all .175s ease-in-out;
 }
 
 #hamburger-button span:first-child {
-  margin-top: 0;
+  margin-top: 12px;
 }
 
 #hamburger-button.open :first-child {
-  -oz-transform: translateX(13px) translateY(3px) rotateY(45deg);
-  -moz-transform: translateX(13px) translateY(3px) rotateY(45deg);
-  -webkit-transform: translateX(13px) translateY(3px) rotateY(45deg);
-  transform: translateX(13px) translateY(3px) rotate(45deg);
+  -oz-transform: translateX(13px) translateY(1px) rotateY(45deg);
+  -moz-transform: translateX(13px) translateY(1px) rotateY(45deg);
+  -webkit-transform: translateX(13px) translateY(1px) rotateY(45deg);
+  transform: translateX(13px) translateY(1px) rotate(45deg);
   width: 15px;
 }
 
@@ -122,114 +286,135 @@ div.about-cont div.content p {
 }
 
 #hamburger-button.open :last-child {
-  -oz-transform: translateX(13px) translateY(-3px) rotate(-45deg);
-  -moz-transform: translateX(13px) translateY(-3px) rotate(-45deg);
-  -webkit-transform: translateX(13px) translateY(-3px) rotate(-45deg);
-  transform: translateX(13px) translateY(-3px) rotate(-45deg);
+  -oz-transform: translateX(13px) translateY(-1px) rotate(-45deg);
+  -moz-transform: translateX(13px) translateY(-1px) rotate(-45deg);
+  -webkit-transform: translateX(13px) translateY(-1px) rotate(-45deg);
+  transform: translateX(13px) translateY(-1px) rotate(-45deg);
   width: 15px;
-}
-
-#hamburger-button.open {
-  -oz-transform: rotate(-360deg);
-  -moz-transform: rotate(-360deg);
-  -webkit-transform: rotate(-360deg);
-  transform: rotate(-360deg);
 }
 
 #hamburger-button.open > span {
   background-color: white;
 }
 
+#hamburger-button.open {
+  background-color: black;
+  border-left: 1px solid white;
+}
+
+#logo-button.open {
+  background-color: black;
+  border-right: 1px solid white;
+  color: white !important`;
+}
+
 /*<><><><><> MENU <><><><><>*/
+
 #menu-wrapper {
   background-color: black;
-  z-index: -1;
-  width: 100%;
-  height: inherit;
-  position: relative;
+  width: 0%;
+  height: 1px;
+  position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
+  margin-top: 24px;
   opacity: 0;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5 ease;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  z-index: 2;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25 ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 #menu-wrapper.open {
+  width: calc(100% - 128px);
+  margin: 24px 64px 0 64px;
   opacity: 1;
 }
 
+#menu-wrapper.height {
+  height: 40px;
+}
+
 ul#menu {
-  text-align: center;
+  text-align: right;
   height: 100%;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 ul#menu li {
   font-style: normal;
-  font-size: 1.25em;
+  font-size: .75em;
   font-weight: 200;
   letter-spacing: 2px;
-  width: 200px;
-  left: 20%;
   position: relative;
   opacity: 0;
   display: inline-block;
-  padding: 0 0 8px 0;
-  margin: 10px auto 0;
+  visibility: hidden;
+  text-transform: uppercase;
+  margin: 12px auto 0;
   color: white;
-  -moz-transition: all 0.25s ease;
-  -o-transition: all 0.25 ease;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
-
-ul#menu li {
-  text-decoration: none;
-  -oz-transition-delay: 0s;
-  -moz-transition-delay: 0s;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  -moz-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
 }
 
 #menu-wrapper.open ul#menu li {
-  left: 0;
+  visibility: visible;
   opacity: 1;
 }
 
-/* TRANSITION-END */
-ul#menu :first-child {
-  transition: opacity 1s ease .35s, left .75s ease .35s;
+#menu-wrapper.open ul#menu {
+  visibility: visible;
 }
 
-ul#menu :nth-child(2) {
+ul#menu li {
+  margin-right: 50px;
+  font-weight: 400;
+  color: white;
+}
+
+ul#menu li:hover {
+  cursor: pointer;
+  color: darkgray;
+}
+
+/*<><><><><> Scroll top button <><><><><>*/
+div#scroll-top {
+  background-color: white;
+  width: 100%;
+  height: 108px;
+  padding: 30px 0;
+  text-align: center;
   position: relative;
-  transition: opacity 1s ease .30s, left .75s ease .30s;
 }
 
-ul#menu :nth-child(3){
-  transition: opacity 1s ease .25s, left .75s ease .25s;
+div#scroll-top i {
+  font-size: 3em;
+  transition: all .125s ease-in-out;
 }
 
-ul#menu :nth-child(4) {
-  transition: opacity 1s ease .20s, left .75s ease .20s;
+div#scroll-top i:hover {
+  cursor: pointer;
+  color: darkgray;
 }
 
-ul#menu :nth-child(5) {
-  transition: opacity 1s ease .15s, left .75s ease .15s;
+/*<><><><><> Video background <><><><><>*/
+video#bgvid {
+  color: white;
+  position: fixed;
+  width: calc(100% - 138px);
+  max-height: 650px;
+  /*height: calc(100% - 64px;);*/
+  margin: 0 auto;
+  background-color: black;
 }
 
-ul#menu li a,
-ul#menu li span {
-  text-decoration: none;
-  color: #495867;
-  transition-delay: 0s;
-}
-
-ul#menu :first-child.trans-end,
-ul#menu :nth-child(2).trans-end,
-ul#menu :nth-child(3).trans-end,
-ul#menu :nth-child(4).trans-end,
-ul#menu :nth-child(5).trans-end {
-  transition-delay: 0s !important;
+div.empty-cont {
+  position: relative;
+  margin-top: 400px;
+  background-color: white;
+  width: 100%;
 }
