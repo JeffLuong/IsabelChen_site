@@ -402,7 +402,7 @@ div#scroll-top i:hover {
 
 /*<><><><><> Video background <><><><><>*/
 video#bgvid,
-div.gray-background {
+div.black-background {
   color: white;
   position: fixed;
   width: calc(100% - 138px);
@@ -411,13 +411,9 @@ div.gray-background {
   background-color: black;
 }
 
-div.gray-background {
-  background-color: darkgray;
+div.black-background {
   height: 425px;
   display: none;
-  -webkit-box-shadow: inset 0px -27px 59px -23px rgba(0,0,0,0.75);
-  -moz-box-shadow: inset 0px -27px 59px -23px rgba(0,0,0,0.75);
-  box-shadow: inset 0px -27px 59px -23px rgba(0,0,0,0.75);
 }
 
 /*<> Used to clear video height <>*/
@@ -494,7 +490,7 @@ div.empty-cont {
     display: none;
   }
 
-  div.gray-background {
+  div.black-background {
     display: block;
   }
 
@@ -522,14 +518,42 @@ div.empty-cont {
   div.content,
   img.photo,
   iframe {
-    width: 280px;
+    width: 100%;
+  }
+
+  div.content {
+    font-size: .65em;
   }
 
   iframe {
     height: 157px;
   }
 
+  div.header-cont {
+    margin-top: 100px;
+  }
+
+  div.header-cont div.content h2,
+  div.header-cont div.content h3 {
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+
+  div.header-cont div.content h3 {
+    font-size: .5em;
+  }
+
   div.empty-cont {
     margin-top: 100px;
+  }
+
+  ul#menu li {
+    margin-right: 15px;
+    font-size: .65em;
+  }
+
+  footer.contact-cont ul li {
+    display: block;
+    margin: 10px 0 10px 0;
   }
 }
