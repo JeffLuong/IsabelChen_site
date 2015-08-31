@@ -559,9 +559,17 @@ div.empty-cont {
     margin-right: 0;
   }
 
+  #menu-wrapper {
+    margin-top: 15px;
+  }
+
+  #menu-wrapper.open {
+    width: calc(100% - 110px);
+    margin: 15px 55px 0 55px;
+  }
+
   div.black-background {
     height: 300px;
-    /*margin-top: 50px;*/
     width: calc(100% - 30px);
   }
 
