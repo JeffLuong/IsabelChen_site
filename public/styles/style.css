@@ -214,6 +214,11 @@ ul.inspo-right-col li:hover h3 {
   opacity: 1;
 }
 
+#resort15-small,
+#iphoneAW14-small {
+  display: none;
+}
+
 /*<><><><> Footer <><><><>*/
 footer.contact-cont {
   width: 100%;
@@ -704,6 +709,11 @@ div.empty-cont {
     display: none;
   }
 
+  ul.inspo-left-col li a h3,
+  ul.inspo-right-col li a h3 {
+    font-size: 2em;
+  }
+
   ul.inspo-left-col,
   ul.inspo-left-col img {
     max-width: 100%;
@@ -712,6 +722,16 @@ div.empty-cont {
   ul.inspo-right-col,
   ul.inspo-right-col img {
     max-width: 100%;
+  }
+
+  #resort15,
+  #iphoneAW14 {
+    display: none;
+  }
+
+  #resort15-small,
+  #iphoneAW14-small {
+    display: block;
   }
 
   ul.inspo-right-col li:nth-child(2) img,
