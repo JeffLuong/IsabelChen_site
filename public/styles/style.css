@@ -38,7 +38,7 @@ li {
 
 div.border {
   position: fixed;
-  z-index: 10;
+  z-index: 9000;
   background-color: #F3F3F3;
 }
 
@@ -72,9 +72,9 @@ div.left {
 
 /*<><><><> App Container <><><><>*/
 div.app-cont {
-  background-color: white;
   padding: 45px 45px 0;
   overflow: hidden;
+  z-index: -5;
 }
 
 /*<><><><> About Container <><><><>*/
@@ -82,7 +82,7 @@ div.main-cont,
 div.header-cont {
   width: 100%;
   position: relative;
-  z-index: 1;
+  z-index: 500;
   background-color: white;
 }
 
@@ -521,6 +521,7 @@ div.white-background {
   max-height: 650px;
   margin: 0 auto;
   background-color: black;
+  z-index: -1;
 }
 
 div.white-background {
