@@ -168,6 +168,10 @@ footer.contact-cont h4 {
 
 footer.contact-cont ul li a {
   text-transform: none;
+  -oz-transition: all .175s ease-in-out;
+  -moz-transition: all .175s ease-in-out;
+  -webkit-transition: all .175s ease-in-out;
+  transition: all .175s ease-in-out;
 }
 
 footer.contact-cont ul li {
@@ -191,6 +195,14 @@ footer.contact-cont h4 {
 footer.contact-cont span {
   bottom: 10px;
   font-size: .5em;
+}
+
+footer.contact-cont ul li a:visited {
+  color: white;
+}
+
+footer.contact-cont ul li a:hover {
+  color: darkgray;
 }
 
 /*<><><><> Burger Button & Logo <><><><>*/
@@ -255,7 +267,7 @@ a#logo-button:visited {
 #hamburger-button > span {
   margin: 4px 8px 0 8px;
   display: block;
-  width: 23px;
+  width: 24px;
   height: 2px;
   background-color: black;
   -oz-transition: all .175s ease-in-out;
@@ -524,6 +536,35 @@ div.empty-cont {
     width: 100%;
   }
 
+  div.border {
+    display: none;
+  }
+
+
+  div.app-cont {
+    padding: 15px;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  a#logo-button,
+  div#hamburger-button {
+    margin: 15px 15px 0 0;
+  }
+
+  a#logo-button {
+    margin-left: 15px;
+    margin-right: 0;
+  }
+
+  div.black-background {
+    height: 300px;
+    /*margin-top: 50px;*/
+    width: calc(100% - 30px);
+  }
+
   div.content {
     font-size: .65em;
   }
@@ -558,5 +599,14 @@ div.empty-cont {
   footer.contact-cont ul li {
     display: block;
     margin: 10px 0 10px 0;
+    font-size: .75em;
+  }
+
+  footer.contact-cont h4 {
+    font-size: .75em;
+  }
+
+  footer.contact-cont span {
+    font-size: 5px;
   }
 }
