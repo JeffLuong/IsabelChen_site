@@ -28,9 +28,14 @@ router.get('/ss14', function(req, res) {
   res.render('paper-london/ss14');
 });
 
-// PAPER LONDON PRODUCTS
-router.get('/products', function(req, res) {
-  res.render('paper-london/products');
+// PAPER LONDON AW 14 PHONE
+router.get('/aw14-phone', function(req, res) {
+  res.render('paper-london/aw14-phone');
+});
+
+// PAPER LONDON AW 15 PHONE
+router.get('/aw15-phone', function(req, res) {
+  res.render('paper-london/aw15-phone');
 });
 
 module.exports = router;

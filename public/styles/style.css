@@ -137,6 +137,77 @@ div.header-cont div.content {
   text-align: center;
 }
 
+/*<><><><> Main Page Photos <><><><>*/
+
+ul.inspo-left-col,
+ul.inspo-right-col {
+  display: inline-block;
+}
+
+ul.inspo-left-col,
+ul.inspo-left-col img {
+  max-width: 475px;
+}
+
+ul.inspo-right-col,
+ul.inspo-right-col img {
+  max-width: 520px;
+}
+
+ul.inspo-left-col,
+ul.inspo-right-col li {
+  float: left;
+}
+
+ul.inspo-right-col li:nth-child(3) {
+  margin-left: 3px;
+  width: calc((100% / 3) + 2px);
+  overflow: hidden;
+}
+
+ul.inspo-left-col li,
+ul.inspo-right-col li {
+  position: relative;
+  text-align: left;
+}
+
+ul.inspo-left-col li img,
+ul.inspo-right-col li img {
+  -webkit-filter: grayscale(0%);
+  -oz-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+ul.inspo-left-col li:hover img,
+ul.inspo-right-col li:hover img {
+  opacity: .65;
+  -webkit-filter: grayscale(100%);
+}
+
+h3.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  padding: 15px;
+  opacity: 0;
+  color: black;
+  -oz-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+ul.inspo-left-col li:hover h3,
+ul.inspo-right-col li:hover h3 {
+  z-index: 2;
+  opacity: 1;
+}
+
 /*<><><><> Footer <><><><>*/
 footer.contact-cont {
   width: 100%;
@@ -413,6 +484,21 @@ div#scroll-top i {
 div#scroll-top i:hover {
   cursor: pointer;
   color: darkgray;
+  -webkit-animation: bounce .5s ease-in-out infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+  }
+
+  50% {
+    -webkit-transform: translateY(5px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+  }
 }
 
 /*<><><><><> Video background <><><><><>*/
