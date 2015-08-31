@@ -23,6 +23,7 @@ header {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 
@@ -94,6 +95,11 @@ div.header-cont {
 div.about-cont,
 div.contact-cont {
   width: 100%;
+}
+
+div.about-cont div.content p {
+  letter-spacing: 1px;
+  line-height: 1.75em;
 }
 
 div.content {
@@ -503,7 +509,7 @@ div#scroll-top i:hover {
 
 /*<><><><><> Video background <><><><><>*/
 video#bgvid,
-div.black-background {
+div.white-background {
   color: white;
   position: fixed;
   width: calc(100% - 138px);
@@ -512,7 +518,7 @@ div.black-background {
   background-color: black;
 }
 
-div.black-background {
+div.white-background {
   height: 425px;
   display: none;
 }
@@ -613,7 +619,7 @@ div.empty-cont {
   }
 
   div.empty-cont {
-    margin-top: 300px;
+    margin-top: 275px;
   }
 }
 
@@ -626,6 +632,11 @@ div.empty-cont {
 
   iframe {
     height: 214px;
+  }
+
+  ul.inspo-left-col li a h3,
+  ul.inspo-right-col li a h3 {
+    font-size: 1em;
   }
 
   ul.inspo-left-col,
@@ -648,16 +659,22 @@ div.empty-cont {
     width: 68px;
   }
 
+  div.content p {
+    font-size: 1em;
+  }
+
   video#bgvid {
     display: none;
   }
 
-  div.black-background {
+  div.white-background {
     display: block;
+    background-color: white;
   }
 
   div.header-cont {
     margin-top: 150px;
+    color: black;
   }
 
   div.header-cont div.content h2,
@@ -734,7 +751,7 @@ div.empty-cont {
     margin: 15px 55px 0 55px;
   }
 
-  div.black-background {
+  div.white-background {
     height: 250px;
     width: calc(100% - 30px);
   }
@@ -753,7 +770,7 @@ div.empty-cont {
 
   div.header-cont div.content h2,
   div.header-cont div.content h3 {
-    font-size: 1em;
+    font-size: 1.25em;
     letter-spacing: 1px;
   }
 

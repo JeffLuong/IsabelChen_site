@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic|Lato:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/styles/style.css" charset="utf-8">
-    <!-- <link rel="stylesheet" href="css/modal.css" type="text/css"> -->
   </head>
   <body>
     <div class="app-cont">
@@ -28,13 +27,11 @@
         </div>
           <div id="menu-wrapper">
             <ul id="menu">
-              <li id="about">ABOUT</li>
-              <li id="portfolio">WORK</li>
-              <li id="contact">CONTACT</li>
+                <% include menu.ejs %>
             </ul>
           </div>
       </header>
-      <div class="black-background"></div>
+      <div class="white-background"></div>
       <%- body %>
 
     </div>
