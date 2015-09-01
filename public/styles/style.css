@@ -11,6 +11,10 @@ body {
   margin: 24px;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 html {
   font-size: 1em;
   font-family: 'Lato', sans-serif;
@@ -186,6 +190,11 @@ ul.inspo-right-col li img {
   transition: all .25s ease-in-out;
 }
 
+ul.inspo-left-col li,
+ul.inspo-right-col li {
+  cursor: pointer;
+}
+
 ul.inspo-left-col li:hover img,
 ul.inspo-right-col li:hover img {
   opacity: .65;
@@ -287,6 +296,45 @@ footer.contact-cont ul li a:hover {
   color: darkgray;
 }
 
+/*<><><><> Modal Close button <><><><>*/
+
+.close-button {
+  display: inline-block;
+  vertical-align: top;
+  height: 21px;
+  top: -20px;
+  right: -35px;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+}
+
+.close-button:hover {
+  cursor: pointer;
+}
+
+.close-button span {
+  margin-top: 6px;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+}
+
+.close-button span:first-child {
+  -oz-transform: translateY(2px) rotate(45deg);
+  -moz-transform: translateY(2px) rotate(45deg);
+  -webkit-transform: translateY(2px) rotate(45deg);
+  transform: translateY(2px) rotate(45deg);
+}
+
+.close-button span:nth-child(2) {
+  -oz-transform: translateY(-6px) rotate(-45deg);
+  -moz-transform: translateY(-6px) rotate(-45deg);
+  -webkit-transform: translateY(-6px) rotate(-45deg);
+  transform: translateY(-6px) rotate(-45deg);
+}
+
 /*<><><><> Burger Button & Logo <><><><>*/
 #hamburger-button,
 a#logo-button {
@@ -296,7 +344,7 @@ a#logo-button {
   margin: 24px 24px 0 0;
   top: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 9997;
   position: fixed;
   background-color: white;
   -oz-transition: all .25s ease-in-out;
@@ -706,6 +754,11 @@ div.empty-cont {
     width: 100%;
   }
 
+
+  div#aw15-video {
+    width: 80%;
+  }
+
   div.border {
     display: none;
   }
@@ -779,10 +832,6 @@ div.empty-cont {
 
   div.content {
     font-size: .65em;
-  }
-
-  iframe {
-    height: 157px;
   }
 
   div.header-cont {
