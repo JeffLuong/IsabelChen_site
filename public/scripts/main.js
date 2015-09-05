@@ -56,10 +56,8 @@ $('#scroll-top i').click(function() {
 });
 
 // IFRAME CONTROLS
-// var hide = true;
 function toggleVideo(state) {
-  var video  = $("#video"),
-      div    = document.getElementById("video"),
+  var div    = document.getElementById("video"),
       iframe = div.getElementsByTagName("iframe")[0].contentWindow;
 
       func = state == 'hide' ? 'pauseVideo' : 'playVideo';
