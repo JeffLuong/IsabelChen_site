@@ -54,3 +54,14 @@ $('#scroll-top i').click(function() {
     }, 750);
     return false;
 });
+
+// IFRAME CONTROLS
+// var hide = true;
+function toggleVideo(state) {
+  var video  = $("#video"),
+      div    = document.getElementById("video"),
+      iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+
+      func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+      iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+}

@@ -46,6 +46,9 @@ var ModalEffects = (function() {
 			close.addEventListener( 'click', function( ev ) {
 				ev.stopPropagation();
 				removeModalHandler();
+				// console.log($("#aw15-video div.md-content iframe")[0]);
+				// $("#aw15-video div.md-content iframe")[0].pause();
+				
 			});
 
 		} );

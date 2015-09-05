@@ -14,9 +14,10 @@
   <body>
     <!--~~~~~~~ Runway Show Modal ~~~~~~~-->
     <div class="md-modal md-effect-1" id="aw15-video">
-      <div class="md-content">
-          <iframe width="800" height="450" src="https://www.youtube.com/embed/ZTlk-UvVXqE" frameborder="0" allowfullscreen></iframe>
-          <div class="close-button md-close">
+      <div id="video" class="md-content">
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/ZTlk-UvVXqE?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+
+          <div class="close-button md-close" onclick="toggleVideo('hide');">
             <span></span>
             <span></span>
           </div>
@@ -49,7 +50,7 @@
       <%- body %>
 
     </div>
-    <div class="md-overlay"></div>
+    <div class="md-overlay" onclick="toggleVideo('hide');"></div>
 
     <footer class="contact-cont">
       <h4>contact me</h4>
@@ -60,9 +61,9 @@
       <span>© 2015 ISABEL QZ CHEN. ALL RIGHTS RESERVED</span>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="/scripts/main.js"></script>
     <script type="text/javascript" src="/scripts/libs/classManager.js"></script>
     <script type="text/javascript" src="/scripts/libs/modalEffects.js"></script>
     <script type="text/javascript" src="/scripts/libs/cssParser.js"></script>
+    <script type="text/javascript" src="/scripts/main.js"></script>
   </body>
 </html>
