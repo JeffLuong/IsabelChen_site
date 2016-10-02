@@ -149,40 +149,50 @@ div.header-cont div.content {
 
 /*<><><><> Main Page Photos <><><><>*/
 
-ul.inspo-left-col,
-ul.inspo-right-col {
+.inspo-left-col,
+.inspo-right-col {
   display: inline-block;
 }
 
-ul.inspo-left-col,
-ul.inspo-left-col img {
+.inspo-left-col,
+.inspo-left-col img {
   max-width: 475px;
 }
 
-ul.inspo-right-col,
-ul.inspo-right-col img {
+.inspo-right-col,
+.inspo-right-col img {
   max-width: 520px;
 }
 
-ul.inspo-left-col,
-ul.inspo-right-col li {
+.inspo-left-col,
+.inspo-right-col li {
   float: left;
 }
 
-ul.inspo-right-col li:nth-child(3) {
+.inspo-paint-col {
+  float: none;
+}
+
+.inspo-paint-col,
+.inspo-paint-col img {
+  width: 100%;
+  max-width: 100% !important;
+}
+
+.inspo-right-col li:nth-child(3) {
   margin-left: 3px;
   width: calc((100% / 3) + 2px);
   overflow: hidden;
 }
 
-ul.inspo-left-col li,
-ul.inspo-right-col li {
+.inspo-left-col li,
+.inspo-right-col li {
   position: relative;
   text-align: left;
 }
 
-ul.inspo-left-col li img,
-ul.inspo-right-col li img {
+.inspo-left-col li img,
+.inspo-right-col li img {
   -webkit-filter: grayscale(0%);
   -oz-transition: all .25s ease-in-out;
   -moz-transition: all .25s ease-in-out;
@@ -190,13 +200,13 @@ ul.inspo-right-col li img {
   transition: all .25s ease-in-out;
 }
 
-ul.inspo-left-col li,
-ul.inspo-right-col li {
+.inspo-left-col li,
+.inspo-right-col li {
   cursor: pointer;
 }
 
-ul.inspo-left-col li:hover img,
-ul.inspo-right-col li:hover img {
+.inspo-left-col li:hover img,
+.inspo-right-col li:hover img {
   opacity: .65;
   -webkit-filter: grayscale(100%);
 }
@@ -226,6 +236,19 @@ ul.inspo-right-col li:hover h3 {
 #resort15-small,
 #iphoneAW14-small {
   display: none;
+}
+
+/*<><><><> Work pages <><><><>*/
+.work.paintings img {
+  max-width: 100% !important;
+}
+
+.work.paintings li {
+  margin-bottom: 10px;
+}
+
+.work.paintings li:first-child img {
+  width: 100%;
 }
 
 /*<><><><> Footer <><><><>*/
@@ -714,7 +737,7 @@ div.empty-cont {
   }
 
   div.content p {
-    font-size: 1em;
+    font-size: 1.25em;
   }
 
   video#bgvid {
@@ -728,13 +751,13 @@ div.empty-cont {
 
   div.header-cont {
     margin-top: 150px;
-    color: black;
   }
 
   div.header-cont div.content h2,
   div.header-cont div.content h3 {
     font-size: 1.5em;
     letter-spacing: 1px;
+    color: black;
   }
 
   div.header-cont div.content h3 {
@@ -753,7 +776,6 @@ div.empty-cont {
   iframe {
     width: 100%;
   }
-
 
   div#aw15-video {
     width: 80%;
@@ -833,6 +855,11 @@ div.empty-cont {
 
   div.content {
     font-size: .65em;
+    padding: 30px 0 50px
+  }
+
+  div.content p {
+    font-size: 1.75em;
   }
 
   div.header-cont {
@@ -841,12 +868,12 @@ div.empty-cont {
 
   div.header-cont div.content h2,
   div.header-cont div.content h3 {
-    font-size: 1.25em;
+    font-size: 2em;
     letter-spacing: 1px;
   }
 
   div.header-cont div.content h3 {
-    font-size: .5em;
+    font-size: 1.25em;
   }
 
   div.empty-cont {
