@@ -62,3 +62,8 @@ function toggleVideo(state) {
       func = state == 'hide' ? 'pauseVideo' : 'playVideo';
       iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
 }
+
+var year = new Date().getFullYear();
+var span = document.createElement('span');
+span.innerText = `© ${year} ISABEL QZ CHEN. ALL RIGHTS RESERVED`;
+document.querySelector('.contact-cont').appendChild(span);
