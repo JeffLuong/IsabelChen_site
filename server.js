@@ -1,13 +1,12 @@
-var express            = require('express'),
-    server             = express(),
-    ejs                = require('ejs'),
-    expressLayouts     = require('express-ejs-layouts'),
-    paperController    = require('./controllers/paper-london.js'),
-    parsonsController  = require('./controllers/parsons.js'),
-    paintingController = require('./controllers/painting.js'),
-    morgan             = require('morgan');
+const express            = require('express');
+const server             = express();
+const expressLayouts     = require('express-ejs-layouts');
+const paperController    = require('./controllers/paper-london.js');
+const parsonsController  = require('./controllers/parsons.js');
+const paintingController = require('./controllers/painting.js');
+const morgan             = require('morgan');
 
-var PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // MORGAN ERROR DETECTION
 server.use(morgan('short'));
